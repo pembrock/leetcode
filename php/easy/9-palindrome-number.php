@@ -7,11 +7,11 @@ class Solution {
      * @param Integer $x
      * @return Boolean
      */
-    function isPalindrome($x) {
+    public function isPalindrome($x) {
         return $x == $this->reverse($x);
     }
 
-    function reverse($number)
+    private function reverse($number)
     {
         $rnum = 0;
         while ($number > 0)

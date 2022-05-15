@@ -10,7 +10,7 @@ class Solution {
      * @param Integer $target
      * @return Integer[]
      */
-    function twoSum($nums, $target) {
+    public function twoSum($nums, $target) {
         $numsHash = [];
         foreach($nums as $index => $val) {
             $numsHash[$val] = $index;
