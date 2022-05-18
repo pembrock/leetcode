@@ -7,7 +7,7 @@ class Solution {
      * @param String $s
      * @return Boolean
      */
-    function isValid($s) {
+    public function isValid($s) {
         if (mb_strlen($s) % 2 != 0) {
             return false;
         }
