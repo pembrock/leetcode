@@ -10,7 +10,7 @@ class Solution {
      * @param Integer $target
      * @return Integer[]
      */
-    public function twoSumO2($nums, $target) {
+    public function twoSum($nums, $target) {
         $numsHash = [];
         foreach($nums as $index => $val) {
             $numsHash[$val] = $index;
@@ -28,8 +28,11 @@ class Solution {
         return [];
     }
 
-    /** Two pointers */
-    public function twoSum(array $nums, int $target): array
+    /**
+     * Two pointers
+     * not work with unsorted array
+     */
+    public function twoSumTwoPointers(array $nums, int $target): array
     {
         $left = 0;
         $right = count($nums) - 1;
