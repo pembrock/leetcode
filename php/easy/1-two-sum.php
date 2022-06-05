@@ -10,7 +10,7 @@ class Solution {
      * @param Integer $target
      * @return Integer[]
      */
-    public function twoSum($nums, $target) {
+    public function twoSumO2($nums, $target) {
         $numsHash = [];
         foreach($nums as $index => $val) {
             $numsHash[$val] = $index;
@@ -22,6 +22,30 @@ class Solution {
                 if ($numsHash[$need] != $i) {
                     return [$i, $numsHash[$need]];
                 }
+            }
+        }
+
+        return [];
+    }
+
+    /** Two pointers */
+    public function twoSum(array $nums, int $target): array
+    {
+        $left = 0;
+        $right = count($nums) - 1;
+
+        while ($left < $right) {
+            $sum = $nums[$left] + $nums[$right];
+            if ($sum == $target) {
+                return [$left, $right];
+            }
+
+            if ($sum > $target) {
+                $right--;
+            }
+
+            if ($sum < $target) {
+                $left++;
             }
         }
 
